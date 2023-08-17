@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Assignment_8
 {
-    internal class EmployeeLayOffEventArgs
+    public enum LayOffCause
     {
+        retiring, usedAll_vacationStock, AchievedTarget , Resigned
+    }
+
+    internal class EmployeeLayOffEventArgs:EventArgs
+    {
+
+        public LayOffCause Cause { get; set; }
     }
 }
